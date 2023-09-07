@@ -1,0 +1,4 @@
+/ Onboarding screens
+
+PageView():
+we use pageview() widget to build Onboarding screens for app. we don't navigate to another screen, we only swipe to different pages.
