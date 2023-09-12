@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/screens/home/home_view.dart';
 import 'package:ecommerce_app/screens/onboarding/onboarding_screens.dart';
 import 'package:flutter/material.dart';
 
@@ -15,7 +16,8 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Manrope',
       ),
       debugShowCheckedModeBanner: false,
-      home: const OnboardingScreens(),
+      //home: const OnboardingScreens(),
+      home: HomeView(),
     );
   }
 }

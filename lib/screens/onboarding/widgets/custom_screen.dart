@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -11,7 +12,7 @@ class CustomScreen extends StatelessWidget {
     return Container(
       height: MediaQuery.of(context).size.height,
       width: MediaQuery.of(context).size.width,
-      color: const Color(0xff2A4BA0),
+      color: AppColors.mainBlue,
       child: Column(
         //mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
@@ -20,34 +21,34 @@ class CustomScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(
+                Text(
                   "Your holiday  ",
                   style: TextStyle(
                       fontSize: 35,
-                      color: Color(0xffFAFBFD),
+                      color: AppColors.mainFont,
                       fontWeight: FontWeight.bold),
                 ),
-                const Text(
+                Text(
                   "shopping",
                   style: TextStyle(
                       fontSize: 35,
-                      color: Color(0xffFAFBFD),
+                      color: AppColors.mainFont,
                       fontWeight: FontWeight.bold),
                 ),
-                const Text(
+                Text(
                   "delivered to Screen",
                   style: TextStyle(
                       fontSize: 35,
-                      color: Color(0xffFAFBFD),
+                      color: AppColors.mainFont,
                       fontWeight: FontWeight.bold),
                 ),
                 Row(
                   children: [
                     Text(
                       pageNum,
-                      style: const TextStyle(
+                      style: TextStyle(
                           fontSize: 35,
-                          color: Color(0xffFAFBFD),
+                          color: AppColors.mainFont,
                           fontWeight: FontWeight.bold),
                     ),
                     const SizedBox(
@@ -69,18 +70,18 @@ class CustomScreen extends StatelessWidget {
                 const SizedBox(
                   height: 20,
                 ),
-                const Text(
+                Text(
                   "There's something for everyone to enjoy with Sweet Shop  ",
                   style: TextStyle(
                       fontSize: 22,
-                      color: Color(0xffB2BBCE),
+                      color: AppColors.descFont,
                       fontWeight: FontWeight.w500),
                 ),
                 Text(
                   "Favourites Screen ${pageNum == "one" ? "1" : "2"}",
-                  style: const TextStyle(
+                  style: TextStyle(
                       fontSize: 22,
-                      color: Color(0xffB2BBCE),
+                      color: AppColors.descFont,
                       fontWeight: FontWeight.w500),
                 ),
                 Container(
