@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Manrope',
       ),
       debugShowCheckedModeBanner: false,
-      //home: const OnboardingScreens(),
+      //home: OnboardingScreens(),
       home: HomeView(),
     );
   }

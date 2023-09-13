@@ -1,4 +1,5 @@
 import 'package:ecommerce_app/constants/app_colors.dart';
+import 'package:ecommerce_app/constants/app_images.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -56,7 +57,7 @@ class CustomScreen extends StatelessWidget {
                     ),
                     Container(
                       child: SvgPicture.asset(
-                        "assets/icons/camp.svg",
+                        AppImages.campImage,
                         height: 50,
                         width: 50,
                       ),
@@ -135,7 +136,7 @@ class CustomScreen extends StatelessWidget {
                   margin: EdgeInsets.only(top: 20),
                   child: SizedBox(
                     child: Image.asset(
-                      "assets/images/cart_gif.gif",
+                      AppImages.cartImage,
                       height: 200,
                       width: 200,
                     ),
