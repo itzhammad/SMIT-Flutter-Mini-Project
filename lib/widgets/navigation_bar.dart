@@ -11,31 +11,63 @@ class MyNavigationBar extends StatefulWidget {
 }
 
 class _MyNavigationBarState extends State<MyNavigationBar> {
-  final screens = [HomeView(), OnboardingScreens()];
+  // final screens = [HomeView(), OnboardingScreens()];
   int index = 0;
   @override
   Widget build(BuildContext context) {
     final items = <Widget>[
-      Icon(
-        Icons.home_filled,
-        size: 30,
-        color: Colors.amber,
-      ),
-      Icon(
-        Icons.category_outlined,
-        color: Colors.amber,
-        size: 30,
-      ),
-      Icon(
-        Icons.favorite_outlined,
-        color: Colors.amber,
-        size: 30,
-      ),
-      Icon(
-        color: Colors.amber,
-        Icons.more_vert_outlined,
-        size: 30,
-      ),
+      IconButton(
+          onPressed: () {
+            Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => HomeView(),
+                ));
+          },
+          icon: Icon(
+            Icons.home_filled,
+            size: 30,
+            color: Colors.amber,
+          )),
+      IconButton(
+          onPressed: () {
+            Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => HomeView(),
+                ));
+          },
+          icon: Icon(
+            Icons.category_outlined,
+            size: 30,
+            color: Colors.amber,
+          )),
+      IconButton(
+          onPressed: () {
+            Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => HomeView(),
+                ));
+          },
+          icon: Icon(
+            Icons.favorite_outlined,
+            size: 30,
+            color: Colors.amber,
+          )),
+      IconButton(
+          onPressed: () {
+            Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => HomeView(),
+                ));
+          },
+          icon: Icon(
+            Icons.more_vert_outlined,
+            size: 30,
+            color: Colors.amber,
+          )),
     ];
     return CurvedNavigationBar(
       backgroundColor: Colors.transparent,
