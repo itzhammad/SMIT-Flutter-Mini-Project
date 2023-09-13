@@ -9,10 +9,12 @@ class ApiData {
   ];
 
   static List<Map<dynamic, dynamic>> categoryData = [
-    {"imageLink": "", "title": "Fishes", "subtitle": "From Sea"},
     {"imageLink": "", "title": "Fruits", "subtitle": "Fresh & Organic"},
     {"imageLink": "", "title": "Meats", "subtitle": "Organic"},
+    {"imageLink": "", "title": "Fishes", "subtitle": "From Sea"},
     {"imageLink": "", "title": "Vegetables", "subtitle": "Organic"},
+    {"imageLink": "", "title": "Beverages", "subtitle": "Chilled"},
+    {"imageLink": "", "title": "Fresh Juices", "subtitle": "Organic"},
   ];
 
   static List cartData = [];

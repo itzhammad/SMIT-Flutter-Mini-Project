@@ -2,3 +2,7 @@
 
 PageView():
 we use pageview() widget to build Onboarding screens for app. we don't navigate to another screen, we only swipe to different pages.
+
+StatefulWidget:
+to access variable created inside the StatefulClass, we "widget" keyword.
+for example: widget.categories[index]['title']

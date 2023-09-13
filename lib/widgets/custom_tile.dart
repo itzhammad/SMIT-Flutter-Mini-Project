@@ -1,4 +1,5 @@
 import 'package:ecommerce_app/constants/app_images.dart';
+import 'package:ecommerce_app/screens/products/products_display.dart';
 import 'package:flutter/material.dart';
 
 class CustomProductTile extends StatefulWidget {
@@ -24,7 +25,15 @@ class _CustomProductTileState extends State<CustomProductTile> {
           ),
           itemBuilder: (context, index) {
             return GestureDetector(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ProductsView(
+                        categoryName: widget.categories[index]['title'],
+                      ),
+                    ));
+              },
               child: Container(
                 padding: EdgeInsets.all(10),
                 decoration: BoxDecoration(
