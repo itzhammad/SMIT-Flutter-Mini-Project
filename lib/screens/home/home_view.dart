@@ -363,20 +363,28 @@ class _HomeViewState extends State<HomeView> {
                                   Positioned(
                                     bottom: 0,
                                     right: 0,
-                                    child: IconButton(
-                                      onPressed: () {
-                                        ApiData.cartData
-                                            .add(ApiData.productData[index]);
-                                        setState(() {});
-                                      },
-                                      icon: Icon(
-                                        Icons.add,
-                                        color: Colors.black,
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        color: AppColors.mainBlue,
                                       ),
-                                      style: ButtonStyle(
-                                          backgroundColor:
-                                              MaterialStatePropertyAll(
-                                                  Colors.amber)),
+                                      child: Center(
+                                        child: IconButton(
+                                          onPressed: () {
+                                            ApiData.cartData.add(
+                                                ApiData.productData[index]);
+                                            setState(() {});
+                                          },
+                                          icon: Icon(
+                                            Icons.add,
+                                            color: AppColors.mainFont,
+                                          ),
+                                          style: ButtonStyle(
+                                              backgroundColor:
+                                                  MaterialStatePropertyAll(
+                                                      Colors.amber)),
+                                        ),
+                                      ),
                                     ),
                                   )
                                 ],
