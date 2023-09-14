@@ -15,11 +15,11 @@ class _ProductsViewState extends State<ProductsView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        toolbarHeight: 150,
+        toolbarHeight: 170,
         backgroundColor: Colors.white,
         automaticallyImplyLeading: false,
         title: Container(
-          height: 150,
+          height: 170,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -100,6 +100,35 @@ class _ProductsViewState extends State<ProductsView> {
                   ],
                 ),
               ),
+              Container(
+                  width: double.infinity,
+                  height: 50,
+                  child: Expanded(
+                    child: ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        itemCount: ApiData.subCategory.length,
+                        itemBuilder: (context, index) {
+                          return GestureDetector(
+                            onTap: () {},
+                            child: Container(
+                              margin: EdgeInsets.only(right: 10),
+                              padding: EdgeInsets.all(12),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(30),
+                                color: Colors.amber,
+                              ),
+                              child: Center(
+                                child: Text(
+                                  ApiData.subCategory[index],
+                                  style: TextStyle(
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.w100),
+                                ),
+                              ),
+                            ),
+                          );
+                        }),
+                  )),
             ],
           ),
         ),
