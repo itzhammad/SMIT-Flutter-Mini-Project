@@ -19,17 +19,17 @@ class _HomeViewState extends State<HomeView> {
         appBar: AppBar(
           toolbarHeight: 250,
           backgroundColor: AppColors.mainBlue,
-          title: Container(
+          title: SizedBox(
             height: 250,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Container(
-                  margin: EdgeInsets.only(top: 50),
+                  margin: const EdgeInsets.only(top: 50),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
+                      const Text(
                         "Hey, Hammad",
                         style: TextStyle(
                           fontSize: 22,
@@ -38,7 +38,7 @@ class _HomeViewState extends State<HomeView> {
                       GestureDetector(
                         child: Stack(
                           children: [
-                            Icon(
+                            const Icon(
                               Icons.shopping_cart,
                               size: 35,
                             ),
@@ -47,6 +47,7 @@ class _HomeViewState extends State<HomeView> {
                               top: 0,
                               child: CircleAvatar(
                                 backgroundColor: Colors.amber,
+                                radius: 10,
                                 child: Text(
                                   "${ApiData.cartData.length}",
                                   textAlign: TextAlign.center,
@@ -55,7 +56,6 @@ class _HomeViewState extends State<HomeView> {
                                     fontSize: 10,
                                   ),
                                 ),
-                                radius: 10,
                               ),
                             )
                           ],
@@ -65,7 +65,7 @@ class _HomeViewState extends State<HomeView> {
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.only(top: 30),
+                  margin: const EdgeInsets.only(top: 30),
                   child: TextField(
                     style: TextStyle(color: AppColors.mainFont),
                     decoration: InputDecoration(
@@ -74,7 +74,7 @@ class _HomeViewState extends State<HomeView> {
                         color: AppColors.mainFont,
                       ),
                       filled: true,
-                      fillColor: Color(0xff153075),
+                      fillColor: const Color(0xff153075),
                       hintText: 'Search Products or store',
                       hintStyle: TextStyle(color: AppColors.descFont),
                       border: OutlineInputBorder(
@@ -84,7 +84,7 @@ class _HomeViewState extends State<HomeView> {
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.only(top: 30),
+                  margin: const EdgeInsets.only(top: 30),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -154,14 +154,14 @@ class _HomeViewState extends State<HomeView> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(
+              SizedBox(
                 height: 150,
                 child: ListView(
                   scrollDirection: Axis.horizontal,
                   children: [
                     // Slide Tiles
                     Container(
-                      margin: EdgeInsets.all(15),
+                      margin: const EdgeInsets.all(15),
                       width: 300,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
@@ -173,9 +173,9 @@ class _HomeViewState extends State<HomeView> {
                         children: [
                           Container(
                             color: Colors.black,
-                            child: SvgPicture.asset(AppImages.campImage),
                             width: 100,
                             height: 80,
+                            child: SvgPicture.asset(AppImages.campImage),
                           ),
                           Container(
                             child: Column(
@@ -203,7 +203,7 @@ class _HomeViewState extends State<HomeView> {
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.all(15),
+                      margin: const EdgeInsets.all(15),
                       width: 300,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
@@ -215,12 +215,12 @@ class _HomeViewState extends State<HomeView> {
                         children: [
                           Container(
                             color: Colors.black,
-                            child: SvgPicture.asset(AppImages.campImage),
                             width: 100,
                             height: 80,
+                            child: SvgPicture.asset(AppImages.campImage),
                           ),
                           Container(
-                            child: Column(
+                            child: const Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
@@ -249,13 +249,13 @@ class _HomeViewState extends State<HomeView> {
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.all(15),
+                      margin: const EdgeInsets.all(15),
                       width: 200,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         color: Colors.amber,
                       ),
-                      child: Column(
+                      child: const Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -286,13 +286,13 @@ class _HomeViewState extends State<HomeView> {
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.all(15),
+                      margin: const EdgeInsets.all(15),
                       width: 200,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         color: AppColors.descFont,
                       ),
-                      child: Column(
+                      child: const Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -326,18 +326,18 @@ class _HomeViewState extends State<HomeView> {
                 ),
               ),
               Container(
-                margin: EdgeInsets.all(15),
-                child: Text(
+                margin: const EdgeInsets.all(15),
+                child: const Text(
                   "Deals on Fruits & Tea",
                   style: TextStyle(fontSize: 26, fontWeight: FontWeight.w300),
                 ),
               ),
               Expanded(
                 child: Container(
-                  margin: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+                  margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
                   child: GridView.builder(
                       itemCount: ApiData.productData.length,
-                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 2,
                         childAspectRatio: 0.85,
                         mainAxisSpacing: 10,
@@ -345,9 +345,9 @@ class _HomeViewState extends State<HomeView> {
                       ),
                       itemBuilder: (context, index) {
                         return Container(
-                          padding: EdgeInsets.all(10),
+                          padding: const EdgeInsets.all(10),
                           decoration: BoxDecoration(
-                              color: Color(0xffE0E2EE),
+                              color: const Color(0xffE0E2EE),
                               borderRadius: BorderRadius.circular(15)),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
@@ -379,7 +379,7 @@ class _HomeViewState extends State<HomeView> {
                                             Icons.add,
                                             color: AppColors.mainFont,
                                           ),
-                                          style: ButtonStyle(
+                                          style: const ButtonStyle(
                                               backgroundColor:
                                                   MaterialStatePropertyAll(
                                                       Colors.amber)),
@@ -392,16 +392,16 @@ class _HomeViewState extends State<HomeView> {
                               Text(
                                 ApiData.productData[index]['title'],
                                 softWrap: true,
-                                style: TextStyle(fontSize: 20),
+                                style: const TextStyle(fontSize: 20),
                               ),
                               Text(
                                 "(${ApiData.productData[index]['subtitle']})",
                                 softWrap: true,
-                                style: TextStyle(fontSize: 15),
+                                style: const TextStyle(fontSize: 15),
                               ),
                               Text(
                                 "Rs. ${ApiData.productData[index]['price']}",
-                                style: TextStyle(fontSize: 20),
+                                style: const TextStyle(fontSize: 20),
                               ),
                             ],
                           ),
@@ -412,6 +412,6 @@ class _HomeViewState extends State<HomeView> {
             ],
           ),
         )),
-        bottomNavigationBar: MyNavigationBar());
+        bottomNavigationBar: const MyNavigationBar());
   }
 }

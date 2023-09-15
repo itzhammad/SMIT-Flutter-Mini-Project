@@ -1,6 +1,4 @@
 import 'package:ecommerce_app/screens/category/category.dart';
-import 'package:ecommerce_app/screens/home/home_view.dart';
-import 'package:ecommerce_app/screens/onboarding/onboarding_screens.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,7 +16,7 @@ class MyApp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       //home: OnboardingScreens(),
-      home: CategoryView(),
+      home: const CategoryView(),
     );
   }
 }

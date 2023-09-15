@@ -86,7 +86,7 @@ class CustomScreen extends StatelessWidget {
                       fontWeight: FontWeight.w500),
                 ),
                 Container(
-                  margin: EdgeInsets.only(top: 40),
+                  margin: const EdgeInsets.only(top: 40),
                   width: double.infinity,
                   //color: Colors.yellow,
                   child: Row(
@@ -95,7 +95,7 @@ class CustomScreen extends StatelessWidget {
                           ? Container(
                               width: 50,
                               height: 5,
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                   color: Colors.white,
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(10))),
@@ -103,19 +103,19 @@ class CustomScreen extends StatelessWidget {
                           : Container(
                               width: 30,
                               height: 5,
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                   color: Color(0xffB2BBCE),
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(10))),
                             ),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
                       index == 1
                           ? Container(
                               width: 50,
                               height: 5,
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                   color: Colors.white,
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(10))),
@@ -123,7 +123,7 @@ class CustomScreen extends StatelessWidget {
                           : Container(
                               width: 30,
                               height: 5,
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                   color: Color(0xffB2BBCE),
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(10))),
@@ -133,7 +133,7 @@ class CustomScreen extends StatelessWidget {
                 ),
                 Container(
                   alignment: Alignment.center,
-                  margin: EdgeInsets.only(top: 20),
+                  margin: const EdgeInsets.only(top: 20),
                   child: SizedBox(
                     child: Image.asset(
                       AppImages.cartImage,

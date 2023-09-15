@@ -40,7 +40,7 @@ class _OnboardingScreensState extends State<OnboardingScreens> {
             Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => HomeView(),
+                  builder: (context) => const HomeView(),
                 ));
           },
           bckgrnd: Colors.white,

@@ -9,25 +9,25 @@ class CustomButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width * 0.75,
-      margin: EdgeInsets.only(bottom: 40),
+      margin: const EdgeInsets.only(bottom: 40),
       height: 70,
       child: ElevatedButton(
         onPressed: onPressed,
-        child: Row(
+        style: ElevatedButton.styleFrom(
+            backgroundColor: bckgrnd,
+            foregroundColor: frgrnd,
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(20))),
+        child: const Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            const Text(
+            Text(
               "Get Started",
               style: TextStyle(fontSize: 20),
             ),
             Icon(Icons.arrow_forward),
           ],
         ),
-        style: ElevatedButton.styleFrom(
-            backgroundColor: bckgrnd,
-            foregroundColor: frgrnd,
-            shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(20))),
       ),
     );
   }

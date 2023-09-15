@@ -18,18 +18,18 @@ class _CategoryViewState extends State<CategoryView> {
       appBar: AppBar(
         toolbarHeight: 250,
         backgroundColor: AppColors.mainBlue,
-        title: Container(
+        title: SizedBox(
           height: 250,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
-                margin: EdgeInsets.only(top: 50),
+                margin: const EdgeInsets.only(top: 50),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
+                    const Text(
                       "Hey, Hammad",
                       style: TextStyle(
                         fontSize: 22,
@@ -39,19 +39,19 @@ class _CategoryViewState extends State<CategoryView> {
                       children: [
                         GestureDetector(
                           onTap: () {},
-                          child: Icon(
+                          child: const Icon(
                             Icons.search,
                             size: 35,
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 15,
                         ),
                         GestureDetector(
                           onTap: () {},
                           child: Stack(
                             children: [
-                              Icon(
+                              const Icon(
                                 Icons.shopping_cart,
                                 size: 35,
                               ),
@@ -60,6 +60,7 @@ class _CategoryViewState extends State<CategoryView> {
                                 top: 0,
                                 child: CircleAvatar(
                                   backgroundColor: Colors.amber,
+                                  radius: 10,
                                   child: Text(
                                     "${ApiData.cartData.length}",
                                     textAlign: TextAlign.center,
@@ -68,7 +69,6 @@ class _CategoryViewState extends State<CategoryView> {
                                       fontSize: 10,
                                     ),
                                   ),
-                                  radius: 10,
                                 ),
                               )
                             ],
@@ -80,7 +80,7 @@ class _CategoryViewState extends State<CategoryView> {
                 ),
               ),
               Container(
-                margin: EdgeInsets.only(top: 10),
+                margin: const EdgeInsets.only(top: 10),
                 child: Text(
                   "Shop",
                   style: TextStyle(
@@ -106,7 +106,7 @@ class _CategoryViewState extends State<CategoryView> {
           child: CustomProductTile(
         categories: ApiData.categoryData,
       )),
-      bottomNavigationBar: MyNavigationBar(),
+      bottomNavigationBar: const MyNavigationBar(),
     );
   }
 }

@@ -21,10 +21,10 @@ class _MyNavigationBarState extends State<MyNavigationBar> {
             Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => HomeView(),
+                  builder: (context) => const HomeView(),
                 ));
           },
-          icon: Icon(
+          icon: const Icon(
             Icons.home_filled,
             size: 30,
             color: Colors.amber,
@@ -34,10 +34,10 @@ class _MyNavigationBarState extends State<MyNavigationBar> {
             Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => CategoryView(),
+                  builder: (context) => const CategoryView(),
                 ));
           },
-          icon: Icon(
+          icon: const Icon(
             Icons.category_outlined,
             size: 30,
             color: Colors.amber,
@@ -47,10 +47,10 @@ class _MyNavigationBarState extends State<MyNavigationBar> {
             Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => HomeView(),
+                  builder: (context) => const HomeView(),
                 ));
           },
-          icon: Icon(
+          icon: const Icon(
             Icons.favorite_outlined,
             size: 30,
             color: Colors.amber,
@@ -60,10 +60,10 @@ class _MyNavigationBarState extends State<MyNavigationBar> {
             Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => HomeView(),
+                  builder: (context) => const HomeView(),
                 ));
           },
-          icon: Icon(
+          icon: const Icon(
             Icons.more_vert_outlined,
             size: 30,
             color: Colors.amber,

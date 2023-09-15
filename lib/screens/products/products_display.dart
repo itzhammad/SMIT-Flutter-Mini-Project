@@ -18,25 +18,25 @@ class _ProductsViewState extends State<ProductsView> {
         toolbarHeight: 170,
         backgroundColor: Colors.white,
         automaticallyImplyLeading: false,
-        title: Container(
+        title: SizedBox(
           height: 170,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
-                margin: EdgeInsets.only(top: 50),
+                margin: const EdgeInsets.only(top: 50),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Container(
-                      margin: EdgeInsets.all(10), // Adjust margin as needed
-                      decoration: BoxDecoration(
+                      margin: const EdgeInsets.all(10), // Adjust margin as needed
+                      decoration: const BoxDecoration(
                         shape: BoxShape.circle, // Make it circular
                         color: Color(0xffF8F9FB), // Background color
                       ),
                       child: IconButton(
-                        icon: Icon(
+                        icon: const Icon(
                           Icons.arrow_back_ios_new,
                           color: Colors.black,
                           size: 20,
@@ -46,32 +46,32 @@ class _ProductsViewState extends State<ProductsView> {
                         },
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 15,
                     ),
                     Text(
                       widget.categoryName,
-                      style: TextStyle(fontSize: 22, color: Colors.black),
+                      style: const TextStyle(fontSize: 22, color: Colors.black),
                     ),
-                    Spacer(),
+                    const Spacer(),
                     Row(
                       children: [
                         GestureDetector(
                           onTap: () {},
-                          child: Icon(
+                          child: const Icon(
                             Icons.search,
                             size: 35,
                             color: Colors.black,
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 15,
                         ),
                         GestureDetector(
                           onTap: () {},
                           child: Stack(
                             children: [
-                              Icon(
+                              const Icon(
                                 Icons.shopping_cart,
                                 size: 35,
                                 color: Colors.black,
@@ -81,6 +81,7 @@ class _ProductsViewState extends State<ProductsView> {
                                 top: 0,
                                 child: CircleAvatar(
                                   backgroundColor: Colors.amber,
+                                  radius: 10,
                                   child: Text(
                                     "${ApiData.cartData.length}",
                                     textAlign: TextAlign.center,
@@ -89,7 +90,6 @@ class _ProductsViewState extends State<ProductsView> {
                                       fontSize: 10,
                                     ),
                                   ),
-                                  radius: 10,
                                 ),
                               )
                             ],
@@ -100,7 +100,7 @@ class _ProductsViewState extends State<ProductsView> {
                   ],
                 ),
               ),
-              Container(
+              SizedBox(
                   width: double.infinity,
                   height: 50,
                   child: Expanded(
@@ -111,8 +111,8 @@ class _ProductsViewState extends State<ProductsView> {
                           return GestureDetector(
                             onTap: () {},
                             child: Container(
-                              margin: EdgeInsets.only(right: 10),
-                              padding: EdgeInsets.all(12),
+                              margin: const EdgeInsets.only(right: 10),
+                              padding: const EdgeInsets.all(12),
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(30),
                                 color: Colors.amber,
@@ -120,7 +120,7 @@ class _ProductsViewState extends State<ProductsView> {
                               child: Center(
                                 child: Text(
                                   ApiData.subCategory[index],
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       fontSize: 15,
                                       fontWeight: FontWeight.w100),
                                 ),
@@ -133,7 +133,7 @@ class _ProductsViewState extends State<ProductsView> {
           ),
         ),
       ),
-      body: SafeArea(child: Text("Prodcuts page")),
+      body: const SafeArea(child: Text("Prodcuts page")),
     );
   }
 }
